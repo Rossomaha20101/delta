@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Надежда Малых - Тестовое задание Delta</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- library -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://code.highcharts.com/highcharts.js"></script> <!-- main library -->
+	<script src="https://code.highcharts.com/modules/data.js"></script> <!-- library get data file csv -->
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<!-- my scripts -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<table class="table table-hover table-borderless table-sm" style="width: 1000px;">
+	<thead>
+		<tr>
+			<th class="table-secondary">Показатель</th>
+			<th class="table-info">Текущий день</th>
+			<th class="table-secondary" colspan="2">Вчера</th>
+			<th class="table-secondary">Этот день недели</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="active">
+			<th scope="row" class="table-secondary">Выручка, руб</th>
+			<td class="table-info">500 521</td>
+			<td class="table-success">480 521</td>
+			<td class="table-success">4%</td>
+			<td class="table-danger">4 805 121</td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<div id="container"></div>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row" class="table-secondary">Наличные</th>
+			<td class="table-info">300 000</td>
+			<td class="table-secondary">300 000</td>
+			<td class="table-secondary">0%</td>
+			<td class="table-secondary">300 000</td>
+		</tr>
+		<tr>
+			<th scope="row" class="table-secondary">Безналичный расчет</th>
+			<td class="table-info">100 000</td>
+			<td class="table-secondary">100 000</td>
+			<td class="table-secondary">0%</td>
+			<td class="table-secondary">100 000</td>
+		</tr>
+		<tr>
+			<th scope="row" class="table-secondary">Кредитные карты</th>
+			<td class="table-info">100 521</td>
+			<td class="table-secondary">100 521</td>
+			<td class="table-secondary">0%</td>
+			<td class="table-secondary">100 521</td>
+		</tr>
+		<tr>
+			<th scope="row" class="table-secondary">Средний чек, руб</th>
+			<td class="table-info">1 300</td>
+			<td class="table-success">900</td>
+			<td class="table-success">44%</td>
+			<td class="table-success">900</td>
+		</tr>
+		<tr>
+			<th scope="row" class="table-secondary">Средний гость, руб</th>
+			<td class="table-info">1 200</td>
+			<td class="table-success">800</td>
+			<td class="table-success">50%</td>
+			<td class="table-success">800</td>
+		</tr>
+		<tr>
+			<th scope="row" class="table-secondary">Удаления из чека (после оплаты), руб</th>
+			<td class="table-info">1 000</td>
+			<td class="table-danger">1 100</td>
+			<td class="table-danger">-9%</td>
+			<td class="table-success">900</td>
+		</tr>
+		<tr>
+			<th scope="row" class="table-secondary">Удаления из чека (до оплаты), руб</th>
+			<td class="table-info">1 300</td>
+			<td class="table-secondary">1 300</td>
+			<td class="table-secondary">0%</td>
+			<td class="table-success">900</td>
+		</tr>
+		<tr>
+			<th scope="row" class="table-secondary">Количество чеков</th>
+			<td class="table-info">34</td>
+			<td class="table-danger">36</td>
+			<td class="table-danger">-6%</td>
+			<td class="table-secondary">34</td>
+		</tr>
+		<tr>
+			<th scope="row" class="table-secondary">Количество гостей</th>
+			<td class="table-info">34</td>
+			<td class="table-danger">36</td>
+			<td class="table-danger">-6%</td>
+			<td class="table-success">32</td>
+		</tr>
+	<tbody>	
+</table>
+<!-- my scripts -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
